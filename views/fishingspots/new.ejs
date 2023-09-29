@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">New Spearfishing Location</h1>
+        <div class="col-6 offset-3">
+            <form action="/fishingspots" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="name">Name: </label>
+                    <input class="form-control" type="text" id="name" name="fishingspot[name]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location: </label>
+                    <input class="form-control" type="text" id="location" name="fishingspot[location]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="longitude">Longitude: </label>
+                    <input class="form-control" type="number" id="longitude" name="fishingspot[longitude]"
+                        step="0.000001" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="latitude">Latitude: </label>
+                    <input class="form-control" type="number" id="latitude" name="fishingspot[latitude]" step="0.000001"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description: </label>
+                    <input class="form-control" type="text" id="description" name="fishingspot[description]" size="80"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="difficulty">Difficulty : 1 (beginner) to 5 (expert): </label>
+                    <input class="form-control" type="number" id="difficulty" min=1 max=5 name="fishingspot[difficulty]"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-file custom-file">
+                        <input type="file" class="form-file-input" id="image" name="image" multiple>
+                        <label class="form-file-label" for="image">
+                            <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                            <span class="form-file-button">Browse</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add New Spot</button>
+                </div>
+            </form>
+            <a href="/">Cancel</a>
+        </div>
+    </div>

@@ -1,0 +1,28 @@
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* Place the image behind other content */
+    object-fit: cover;
+    /* Ensure the image covers the entire viewport */
+}
+
+/* Center the text content vertically and horizontally */
+.home-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+/* Additional styling for the heading and other content */
+.home-h1 {
+    font-size: 4rem;
+    color: rgb(114, 203, 82);
+    font-family: 'Black Ops One', cursive;
+    text-shadow: 0 3px 5px rgb(23, 41, 43);
+}
